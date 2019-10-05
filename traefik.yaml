@@ -1,0 +1,10 @@
+## traefik.yml
+
+# Docker configuration backend
+providers:
+  docker:
+    network: proxy
+
+# API and dashboard configuration
+api:
+  insecure: true

@@ -35,8 +35,8 @@ $ docker container ls --filter=name=traefik
 
 You should see something like that:
 ```
-CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                                        NAMES
-1156df01e198        traefik:montdor-alpine   "/entrypoint.sh trae…"   9 minutes ago       Up 9 minutes        0.0.0.0:80->80/tcp, 0.0.0.0:8888->8080/tcp   traefik_traefik_1
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                        NAMES
+645f8bfdbb03        traefik:montdor     "/entrypoint.sh trae…"   3 minutes ago       Up 3 minutes        0.0.0.0:80->80/tcp, 0.0.0.0:8888->8080/tcp   traefik_traefik_1
 ```
 
 You can also access the Traefik dashboard on [localhost:8888](http://localhost:8888).

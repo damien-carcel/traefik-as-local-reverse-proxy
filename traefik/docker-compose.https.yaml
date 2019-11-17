@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  traefik:
+    image: 'traefik:montdor'
+    restart: 'always'
+    networks:
+      - proxy
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8888:8080'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - './dynamic:/etc/traefik/dynamic:ro'
+      - './ssl:/etc/traefik/ssl:ro'
+      - './traefik.yaml:/etc/traefik/traefik.yaml:ro'
+
+networks:
+  proxy:
+    external: true

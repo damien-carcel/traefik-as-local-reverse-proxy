@@ -91,12 +91,13 @@ $ mkcert -install
 
 You can now generate a wildcard certificate for `docker.localhost` domain:
 ```bash
+$ mkcert "*.docker.localhost"
 $ sudo mkdir /srv/traefik/ssl
-$ cd /srv/traefik/ssl
-$ sudo mkcert "*.docker.localhost"
+$ sudo cp _wildcard.docker.localhost* /srv/traefik/ssl
 ```
 
 This generated a certificate `_wildcard.docker.localhost.pem` and its key `_wildcard.docker.localhost-key.pem`.
+It is important to generate the certificate with the same user you deployed the root CA previously.
 
 ### Setup Traefik with HTTPS
 

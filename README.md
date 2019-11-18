@@ -92,7 +92,7 @@ $ mkcert -install
 You can now generate a wildcard certificate for `docker.localhost` domain:
 ```bash
 $ sudo mkdir /srv/traefik/ssl
-$ cd /srv/traefik
+$ cd /srv/traefik/ssl
 $ sudo mkcert "*.docker.localhost"
 ```
 

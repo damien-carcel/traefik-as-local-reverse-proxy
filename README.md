@@ -35,8 +35,8 @@ $ docker container ls --filter=name=traefik
 
 You should see something like that:
 ```
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                        NAMES
-xxxxxxxxxxxx        traefik:montdor     "/entrypoint.sh trae…"   2 seconds ago       Up 1 second         0.0.0.0:80->80/tcp, 0.0.0.0:8888->8080/tcp   traefik_traefik_1
+CONTAINER ID        IMAGE           COMMAND                  CREATED             STATUS              PORTS                                        NAMES
+xxxxxxxxxxxx        traefik         "/entrypoint.sh trae…"   2 seconds ago       Up 1 second         0.0.0.0:80->80/tcp, 0.0.0.0:8888->8080/tcp   traefik_traefik_1
 ```
 
 You can also access the Traefik dashboard on [localhost:8888](http://localhost:8888).
@@ -115,8 +115,8 @@ $ sudo systemctl restart docker-compose-traefik.service
 
 Listing the Traefik container should now output something like:
 ```
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                              NAMES
-xxxxxxxxxxxx        traefik:montdor     "/entrypoint.sh trae…"   2 seconds ago       Up 1 second         0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:8888->8080/tcp   traefik_traefik_1
+CONTAINER ID        IMAGE           COMMAND                  CREATED             STATUS              PORTS                                                              NAMES
+xxxxxxxxxxxx        traefik         "/entrypoint.sh trae…"   2 seconds ago       Up 1 second         0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 0.0.0.0:8888->8080/tcp   traefik_traefik_1
 ```
 
 ### Enable Traefik on your application

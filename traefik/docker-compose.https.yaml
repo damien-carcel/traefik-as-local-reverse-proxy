@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   traefik:
-    image: 'traefik:cantal'
+    image: 'traefik'
     restart: 'always'
     networks:
       - proxy
